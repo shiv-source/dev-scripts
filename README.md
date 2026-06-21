@@ -21,9 +21,22 @@ dev-scripts/
 
 ## Usage
 
+Run any script directly from the raw URL — no clone needed:
+
 ```bash
-./setup-graphify.sh   # install Graphify
-./some-other-tool.sh  # run whatever you've added
+curl -fsSL https://raw.githubusercontent.com/shiv-source/dev-scripts/refs/heads/main/setup-graphify.sh | bash
+```
+
+Or with `wget`:
+
+```bash
+wget -qO- https://raw.githubusercontent.com/shiv-source/dev-scripts/refs/heads/main/setup-graphify.sh | bash
+```
+
+To play it safe, download first then execute:
+
+```bash
+curl -fsSLo /tmp/setup-graphify.sh https://raw.githubusercontent.com/shiv-source/dev-scripts/refs/heads/main/setup-graphify.sh && bash /tmp/setup-graphify.sh
 ```
 
 ## Adding a script
